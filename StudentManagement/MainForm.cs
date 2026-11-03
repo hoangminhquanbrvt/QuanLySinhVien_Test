@@ -17,7 +17,10 @@ namespace StudentManagement
 
         private void btnStudents_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chức năng quản lý sinh viên đang được xây dựng.");
+            using (var form = new StudentManagement.UI.QuanLySinhVienForm())
+            {
+                form.ShowDialog(this);
+            }
         }
 
         private void btnClasses_Click(object sender, EventArgs e)
@@ -38,6 +41,11 @@ namespace StudentManagement
         private void btnGrades_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Chức năng quản lý điểm đang được xây dựng.");
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
