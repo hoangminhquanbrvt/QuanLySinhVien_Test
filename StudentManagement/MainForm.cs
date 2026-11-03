@@ -25,7 +25,10 @@ namespace StudentManagement
 
         private void btnClasses_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chức năng quản lý lớp học đang được xây dựng.");
+            using (var form = new StudentManagement.UI.QuanLyLopHocForm())
+            {
+                form.ShowDialog(this);
+            }
         }
 
         private void btnDepartments_Click(object sender, EventArgs e)
